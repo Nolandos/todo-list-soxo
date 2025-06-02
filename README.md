@@ -4,6 +4,9 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 SOXO TODO App - Recruitment task to test your knowledge and skills as a Frontend developer.
 The application was written in accordance with the Feature-First Architecture, as the aim of our task was to rely on a modular architecture and the task was limited to a single feature (todo list).
 
+### The application is available under the link
+https://todo-list-soxo.vercel.app/
+
 ### Technologies:
 - Node v20.18.0
 - Next.js v15.3
