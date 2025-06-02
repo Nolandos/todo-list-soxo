@@ -99,8 +99,8 @@ export function TodoProvider({
 
     const loadMore = useCallback(() => {
         const newPaginationSize = paginationSize + defaultPaginationSize;
-        if(newPaginationSize <= initialTodos?.length) {
-            setPaginationSize(newPaginationSize);
+        if(paginationSize < initialTodos?.length) {
+            setPaginationSize(Math.min(newPaginationSize, initialTodos?.length));
         }
     }, [paginationSize, initialTodos, defaultPaginationSize]);
 

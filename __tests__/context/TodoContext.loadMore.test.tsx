@@ -63,7 +63,7 @@ describe('TodoContext - Pagination and Filtering', () => {
             expect(screen.getByTestId('pagination-size').textContent).toBe('20');
         });
 
-        test('should not increase paginationSize beyond initialTodos length', () => {
+        test('should correctly increase paginationSize up to initialTodos length', () => {
             const initialTodos: Todo[] = Array.from({ length: 15 }, (_, i) => ({
                 id: i + 1,
                 title: `Todo ${i + 1}`,
@@ -78,13 +78,10 @@ describe('TodoContext - Pagination and Filtering', () => {
             );
 
             expect(screen.getByTestId('pagination-size').textContent).toBe('10');
-
             expect(screen.getByTestId('total').textContent).toBe('15');
 
-
             fireEvent.click(screen.getByTestId('load-more'));
-
-            expect(screen.getByTestId('pagination-size').textContent).toBe('10');
+            expect(screen.getByTestId('pagination-size').textContent).toBe('15');
         });
     });
 
